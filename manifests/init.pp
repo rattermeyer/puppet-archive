@@ -59,6 +59,8 @@ define archive (
   $dependency_class = Class['archive::prerequisites'],
   $exec_path        = ['/usr/local/bin', '/usr/bin', '/bin']) {
 
+  include archive::prerequisites
+
   archive::download {"${name}.${extension}":
     ensure          => $ensure,
     url             => $url,
