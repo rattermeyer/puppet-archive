@@ -9,10 +9,10 @@
 class archive::prerequisites {
 
   # list of packages needed for download and extraction
-  $packages = [ 'curl', 'unzip', 'tar', ]
+#  $packages = [ 'curl', 'unzip', 'tar', ]
 
   # install additional packages if missing
-  package { $packages:
-    ensure => installed,
-  }
+#  package { $packages:
+#    ensure => installed,
+#  }
 }
