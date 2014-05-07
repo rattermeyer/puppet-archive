@@ -40,7 +40,7 @@ define archive::extract (
   if $root_dir != '' {
     $extract_dir = "${target}/${root_dir}"
   } else {
-    $extract_dir = "${target}/${name}"
+    $extract_dir = "${target}"
   }
 
   case $ensure {
