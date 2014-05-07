@@ -148,7 +148,7 @@ define archive::download (
       }
 
       exec {"download archive ${name} and check sum":
-        command     => "curl ${basic_auth} -s ${insecure_arg} ${redirects_arg} ${proxy_arg} -o ${src_target}/${name} ${url}",
+        command     => "curl ${basic_auth} ${insecure_arg} ${redirects_arg} ${proxy_arg} -o ${src_target}/${name} ${url}",
         path        => $exec_path,
         creates     => "${src_target}/${name}",
         logoutput   => true,
